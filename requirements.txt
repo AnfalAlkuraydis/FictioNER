@@ -1,0 +1,12 @@
+# Core
+torch>=2.2
+transformers>=4.42
+datasets>=2.21
+seqeval>=1.2.2
+gradio>=4.0
+numpy>=1.26
+tqdm>=4.66
+
+# Optional (but useful in Colab/experiments)
+scikit-learn>=1.4
+pandas>=2.2
