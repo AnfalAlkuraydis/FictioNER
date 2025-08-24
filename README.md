@@ -42,7 +42,6 @@ pip install -r requirements.txt
 ```
 
 
----
 
 ## 🎛️ Gradio Interface
 Here’s an example of the interactive demo:
