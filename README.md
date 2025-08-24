@@ -42,5 +42,4 @@ pip install -r requirements.txt
 
 ---
 
-## Gradio Interface
-<img width="1563" height="733" alt="image" src="https://github.com/user-attachments/assets/d517f8cd-4349-4d61-a1a9-262c8b6c534f" />
+
