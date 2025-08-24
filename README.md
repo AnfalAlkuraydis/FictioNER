@@ -41,21 +41,6 @@ cd FictioNER
 pip install -r requirements.txt
 ```
 
----
-
-## ▶️ Usage
-
-### Training
-Run the training script:
-```bash
-python fictioner.py
-```
-
-### Run Gradio Demo
-Launch the interactive demo:
-```bash
-python fictioner.py --demo
-```
 
 ---
 
