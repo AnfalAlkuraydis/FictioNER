@@ -41,7 +41,19 @@ cd FictioNER
 pip install -r requirements.txt
 ```
 
+---
 
+## ▶️ Usage
+
+
+
+### Run Gradio Demo
+Launch the interactive demo:
+```bash
+python fictioner.py --demo
+```
+
+---
 
 ## 🎛️ Gradio Interface
 Here’s an example of the interactive demo:
