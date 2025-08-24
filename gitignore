@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & artifacts
+data/*
+!data/.gitkeep
+!data/litbank_splits/.gitkeep
+!data/tokenized_roberta/.gitkeep
+!data/gradio_flagged/.gitkeep
+
+# Checkpoints / weights
+checkpoints/*
+!checkpoints/.gitkeep
+!checkpoints/roberta_litbank_finetuned/.gitkeep
+
+# Logs & runs
+runs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
