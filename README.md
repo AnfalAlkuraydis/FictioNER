@@ -41,28 +41,17 @@ cd FictioNER
 pip install -r requirements.txt
 ```
 
----
-
-## ▶️ Usage
-
-
-
-### Run Gradio Demo
-Launch the interactive demo:
-```bash
-python fictioner.py --demo
-```
 
 ---
 
 ## 🎛️ Gradio Interface
 Here’s an example of the interactive demo:
 
-<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/gradio.PNG" width="800"/>
+<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/asset/gradio.PNG" width="800"/>
 
 ---
 
 ## 📝 Example Flagged Data
 Feedback collected via Gradio flagging:
 
-<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/flags.PNG" width="800"/>
+<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/asset/flags.PNG" width="800"/>
