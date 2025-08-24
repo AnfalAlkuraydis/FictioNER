@@ -36,13 +36,21 @@ The pipeline includes:
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/<your-username>/FictioNER.git
+git clone https://github.com/AnfalAlkuraydis/FictioNER.git
 cd FictioNER
 pip install -r requirements.txt
+```
 
-🎛️ Gradio Interface
+---
 
+## 🎛️ Gradio Interface
 Here’s an example of the interactive demo:
 
 <img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/gradio.PNG" width="800"/>
 
+---
+
+## 📝 Example Flagged Data
+Feedback collected via Gradio flagging:
+
+<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/flags.PNG" width="800"/>
