@@ -47,11 +47,11 @@ pip install -r requirements.txt
 ## 🎛️ Gradio Interface
 Here’s an example of the interactive demo:
 
-<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/asset/gradio.PNG" width="800"/>
+<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/assets/gradio.PNG" width="800"/>
 
 ---
 
 ## 📝 Example Flagged Data
 Feedback collected via Gradio flagging:
 
-<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/asset/flags.PNG" width="800"/>
+<img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/assets/flags.PNG" width="800"/>
