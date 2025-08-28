@@ -7,7 +7,6 @@ Fine-tuned [RoBERTa](https://huggingface.co/roberta-base) for Named Entity Recog
 ![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-ffcc00?logo=huggingface&logoColor=black)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-UI-00A67E)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
 
@@ -78,46 +77,6 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Quickstart
-
-### Train
-```bash
-python src/train.py \
-  --train data/train.conll \
-  --dev data/dev.conll \
-  --labels config/labels.txt \
-  --model_name roberta-base \
-  --output_dir models/roberta-fic-ner \
-  --epochs 3 --batch_size 16 --lr 3e-5
-```
-
-### Evaluate
-```bash
-python src/evaluate.py \
-  --test data/test.conll \
-  --labels config/labels.txt \
-  --model_dir models/roberta-fic-ner
-```
-
-### Inference (CLI)
-```bash
-python src/infer.py \
-  --text "Arya met the Faceless Man in Braavos near the House of Black and White." \
-  --model_dir models/roberta-fic-ner
-```
-
-### Inference (Python)
-```python
-from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-model_dir = "models/roberta-fic-ner"
-tok = AutoTokenizer.from_pretrained(model_dir)
-model = AutoModelForTokenClassification.from_pretrained(model_dir)
-ner = pipeline("token-classification", model=model, tokenizer=tok, aggregation_strategy="simple")
-ner("The White Witch ruled Narnia from Cair Paravel.")
-```
-
----
-
 ## 🎛️ Gradio Interface
 <img src="https://github.com/AnfalAlkuraydis/FictioNER/blob/main/assets/gradio.PNG" width="800"/>
 
@@ -126,36 +85,6 @@ ner("The White Witch ruled Narnia from Cair Paravel.")
 
 ---
 
-## 🧰 Project Structure (suggested)
-```
-FictioNER/
-├─ src/
-│  ├─ train.py          # fine-tuning script
-│  ├─ evaluate.py       # metrics with seqeval
-│  ├─ infer.py          # CLI inference
-│  ├─ data_utils.py     # readers (CoNLL, JSONL) & aligners
-│  └─ app_gradio.py     # demo
-├─ config/
-│  ├─ labels.txt
-│  └─ params.yaml       # optional
-├─ data/
-│  ├─ train.conll
-│  ├─ dev.conll
-│  └─ test.conll
-├─ models/
-│  └─ roberta-fic-ner/
-├─ assets/
-│  ├─ gradio.PNG
-│  └─ flags.PNG
-└─ requirements.txt
-```
-
----
-
-## 📜 License
-Released under the **MIT License**.
-
----
 
 <div align="center">
 Made with ❤️ — bringing NER to the world of fiction.
