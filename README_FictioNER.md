@@ -4,9 +4,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
 ![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-ffcc00?logo=huggingface&logoColor=black)
-![spaCy](https://img.shields.io/badge/spaCy-NLP-09A3D5?logo=spacy&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+
 
 Domain-adapted NER for **fiction & narrative text** — detect **characters**, **locations**, **organizations**, and custom literary entities.
 
@@ -89,83 +88,6 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 ```
-
----
-
-## 🚀 Quickstart
-
-### 1) Train
-```bash
-python src/train.py \
-  --train data/train.conll \
-  --dev data/dev.conll \
-  --labels config/labels.txt \
-  --model_name roberta-base \
-  --output_dir models/roberta-fic-ner \
-  --epochs 3 --batch_size 16 --lr 3e-5
-```
-
-### 2) Evaluate
-```bash
-python src/evaluate.py \
-  --test data/test.conll \
-  --labels config/labels.txt \
-  --model_dir models/roberta-fic-ner
-```
-
-### 3) Inference (CLI)
-```bash
-python src/infer.py \
-  --text "Arya met the Faceless Man in Braavos near the House of Black and White." \
-  --model_dir models/roberta-fic-ner
-```
-
-### 4) Inference (Python)
-```python
-from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-model_dir = "models/roberta-fic-ner"
-tok = AutoTokenizer.from_pretrained(model_dir)
-model = AutoModelForTokenClassification.from_pretrained(model_dir)
-ner = pipeline("token-classification", model=model, tokenizer=tok, aggregation_strategy="simple")
-ner("The White Witch ruled Narnia from Cair Paravel.")
-```
-
----
-
-## 🧰 Project Structure (suggested)
-```
-FictioNER/
-├─ src/
-│  ├─ train.py          # fine-tuning script
-│  ├─ evaluate.py       # metrics with seqeval
-│  ├─ infer.py          # CLI inference
-│  ├─ data_utils.py     # readers (CoNLL, JSONL, DocBin) & aligners
-│  └─ postprocess.py    # optional spaCy/rules cleanup
-├─ config/
-│  ├─ labels.txt        # entity set (one per line)
-│  └─ params.yaml       # optional config
-├─ data/
-│  ├─ train.conll
-│  ├─ dev.conll
-│  └─ test.conll
-├─ models/
-│  └─ roberta-fic-ner/
-├─ notebooks/
-└─ requirements.txt
-```
-
----
-
-## 🛣️ Roadmap
-- Add **coreference‑aware** heuristics to link aliases/epithets to canonical names.
-- Release **pretrained checkpoints** on the Hub.
-- Streamlit demo that highlights entities on full chapters.
-- Export to **spaCy** pipeline for easy integration.
-
----
-
-## 📜 License
-Released under the **MIT License**. Check any third‑party datasets for their own terms.
 
 ---
 
